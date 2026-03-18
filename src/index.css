@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&subset=cyrillic,cyrillic-ext,latin&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&subset=cyrillic,cyrillic-ext,latin&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,35 +6,35 @@
 
 @layer base {
   :root {
-    /* VA Landing Page color palette - purple accents */
+    /* АПК Якутия - зелёная гос. палитра */
     --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
+    --foreground: 210 15% 12%;
 
-    --card: 0 0% 96%;
-    --card-foreground: 0 0% 9%;
+    --card: 120 10% 97%;
+    --card-foreground: 210 15% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
+    --popover-foreground: 210 15% 12%;
 
-    --primary: 0 0% 9%;
+    --primary: 210 15% 12%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 93%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 120 8% 93%;
+    --secondary-foreground: 210 15% 12%;
 
-    --muted: 0 0% 90%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 120 6% 90%;
+    --muted-foreground: 210 10% 40%;
 
-    /* Purple accent color */
-    --accent: 270 50% 45%;
+    /* Государственный зелёный */
+    --accent: 142 55% 32%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 270 50% 45%;
+    --border: 120 8% 85%;
+    --input: 120 8% 85%;
+    --ring: 142 55% 32%;
 
     --radius: 0.625rem;
 
@@ -67,9 +67,9 @@
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 50%;
 
-    /* Purple accent for dark mode */
-    --accent: 270 50% 55%;
-    --accent-foreground: 0 0% 7%;
+    /* Зелёный для тёмной темы */
+    --accent: 142 55% 42%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -96,7 +96,11 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 }
 

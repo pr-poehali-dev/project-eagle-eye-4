@@ -1,59 +1,75 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 export function FAQ() {
   const faqs = [
     {
-      question: "Что если я полный новичок?",
+      question: "Кто может обратиться в ЦРО АПК за ресурсами?",
       answer:
-        "Не проблема! Обучение подходит для любого уровня. Мы начнем с основ и будем двигаться в вашем темпе. Каждая сессия адаптируется под ваш текущий опыт.",
+        "В наш центр могут обращаться все сельскохозяйственные товаропроизводители Республики Саха (Якутия): крестьянско-фермерские хозяйства, сельскохозяйственные потребительские кооперативы, личные подсобные хозяйства, а также агропромышленные предприятия республики.",
     },
     {
-      question: "Сколько длится сессия?",
+      question: "Как оформить заявку на получение ресурсов?",
       answer:
-        "Каждая сессия длится 60 минут. Этого достаточно, чтобы разобрать материал, попрактиковаться и ответить на ваши вопросы без спешки.",
+        "Заявку можно подать несколькими способами: лично в офисе учреждения по адресу г. Якутск, ул. Кирова, 13; по телефону +7 (4112) 34-16-84; по электронной почте info@apksakha.ru; или заполнив форму на нашем сайте. Специалисты помогут оформить все необходимые документы.",
     },
     {
-      question: "Можно ли перенести сессию?",
+      question: "Предоставляются ли субсидии при покупке ресурсов?",
       answer:
-        "Да, вы можете перенести сессию бесплатно, если сообщите минимум за 24 часа. Просто свяжитесь со мной как можно раньше.",
+        "Да, государство субсидирует часть стоимости ресурсов для сельхозтоваропроизводителей. Условия и размер субсидий зависят от вида ресурса, категории хозяйства и текущих программ поддержки Минсельхоза РС(Я). Наши специалисты проконсультируют по всем доступным мерам поддержки.",
     },
     {
-      question: "Что если обучение мне не подойдет?",
+      question: "Осуществляется ли доставка в отдалённые районы Якутии?",
       answer:
-        "Я предлагаю 100% гарантию возврата, если первая сессия вас не устроит. Ваш успех - мой приоритет.",
+        "Да, мы организуем поставки во все 34 муниципальных района республики. Для труднодоступных районов используем все доступные виды транспорта, в том числе зимники и авиадоставку. Сроки и условия доставки обсуждаются индивидуально.",
     },
     {
-      question: "Есть ли пакетные предложения?",
+      question: "Какую технику можно приобрести через ЦРО АПК?",
       answer:
-        "Да! Я предлагаю скидки на пакеты из 5 и 10 сессий. Свяжитесь со мной для уточнения условий.",
+        "Через наш центр доступны тракторы, комбайны, почвообрабатывающая и посевная техника, оборудование для животноводства, а также запасные части к ним. Мы работаем с ведущими российскими и зарубежными производителями сельскохозяйственной техники.",
     },
     {
-      question: "Помогаете ли вы с трудоустройством?",
+      question: "Есть ли возможность приобрести ресурсы в рассрочку?",
       answer:
-        "Да! Карьерная поддержка включена во все программы обучения. Это помощь с резюме, подготовка к собеседованиям и консультации по поиску работы.",
+        "Для отдельных категорий ресурсов и при наличии государственных программ поддержки возможно предоставление льготных условий оплаты. Подробную информацию о действующих программах уточняйте у наших специалистов по телефону или на личном приёме.",
     },
   ]
 
   return (
     <section id="faq" className="bg-muted/30 py-20 md:py-32">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-accent font-semibold text-sm uppercase tracking-wide">Вопросы?</p>
+          <p className="text-accent font-semibold text-sm uppercase tracking-wide">Вопросы и ответы</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 text-balance">
-            Частые вопросы
+            Часто задаваемые вопросы
           </h2>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+            Ответы на вопросы о работе Центра ресурсного обеспечения АПК
+          </p>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
-          {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="bg-card border border-border rounded-lg px-6">
-              <AccordionTrigger className="text-foreground font-semibold hover:text-accent">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible className="flex flex-col gap-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="bg-card border border-border rounded-xl px-6 data-[state=open]:shadow-md transition"
+              >
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </section>
   )

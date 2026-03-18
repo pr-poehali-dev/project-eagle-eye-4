@@ -1,95 +1,53 @@
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background py-12 md:py-16">
+    <footer className="bg-foreground text-background py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-bold">E</span>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                <span className="text-accent-foreground font-bold text-xs">АПК</span>
               </div>
-              <span className="font-semibold">Elevate VA Academy</span>
+              <div>
+                <p className="font-bold text-background text-sm">ГКУ РС(Я) «ЦРО АПК»</p>
+              </div>
             </div>
-            <p className="text-sm text-background/70">Персональное обучение 1-на-1 для будущих виртуальных ассистентов.</p>
+            <p className="text-background/60 text-sm leading-relaxed">
+              Государственное казённое учреждение Республики Саха (Якутия) «Центр ресурсного обеспечения 
+              агропромышленного комплекса»
+            </p>
           </div>
+
           <div>
-            <h4 className="font-semibold mb-4">Навигация</h4>
-            <ul className="space-y-2 text-sm text-background/70">
-              <li>
-                <a href="#about" className="hover:text-background transition">
-                  О нас
-                </a>
-              </li>
-              <li>
-                <a href="#benefits" className="hover:text-background transition">
-                  Преимущества
-                </a>
-              </li>
-              <li>
-                <a href="#booking" className="hover:text-background transition">
-                  Записаться
-                </a>
-              </li>
-              <li>
-                <a href="#testimonials" className="hover:text-background transition">
-                  Отзывы
-                </a>
-              </li>
+            <h4 className="font-semibold text-background mb-4">Услуги</h4>
+            <ul className="space-y-2 text-sm text-background/60">
+              <li>Горюче-смазочные материалы</li>
+              <li>Минеральные удобрения</li>
+              <li>Сельскохозяйственная техника</li>
+              <li>Запасные части</li>
+              <li>Корма и кормовые добавки</li>
             </ul>
           </div>
+
           <div>
-            <h4 className="font-semibold mb-4">Поддержка</h4>
-            <ul className="space-y-2 text-sm text-background/70">
-              <li>
-                <a href="#" className="hover:text-background transition">
-                  Контакты
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-background transition">
-                  Вопросы
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-background transition">
-                  Конфиденциальность
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-background transition">
-                  Условия
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-4">Связаться</h4>
-            <ul className="space-y-2 text-sm text-background/70">
-              <li>
-                <a href="#" className="hover:text-background transition">
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-background transition">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-background transition">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-background transition">
-                  Email
-                </a>
-              </li>
+            <h4 className="font-semibold text-background mb-4">Контакты</h4>
+            <ul className="space-y-2 text-sm text-background/60">
+              <li>г. Якутск, ул. Кирова, 13</li>
+              <li>+7 (4112) 34-16-84</li>
+              <li>info@apksakha.ru</li>
+              <li>apksakha.ru</li>
+              <li>Пн–Пт: 9:00–18:00</li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-background/20 pt-8 text-center text-sm text-background/70">
-          <p>&copy; 2025 Elevate VA Academy. Все права защищены.</p>
+
+        <div className="border-t border-background/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-background/40 text-sm">
+            © {new Date().getFullYear()} ГКУ РС(Я) «ЦРО АПК». Все права защищены.
+          </p>
+          <p className="text-background/40 text-sm">
+            Учредитель: Министерство сельского хозяйства и продовольственной политики РС(Я)
+          </p>
         </div>
       </div>
     </footer>
